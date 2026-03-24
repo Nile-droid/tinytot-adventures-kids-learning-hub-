@@ -43,4 +43,5 @@ A delightful, engaging, and child-friendly mobile learning application for toddl
 *(Note: Replace placeholders with actual image URLs after uploading)*
 
 ---
-Developed with ❤️ by [Your Name]
+Developed with ❤️ by Nilesh Mishra
+

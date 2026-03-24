@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyTot Learning Adventures</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Onboarding Screen -->
+        <section id="onboarding" class="screen active">
+            <div class="env-bg"></div>
+            <h1 style="font-size: 32px; color: var(--berry-red); margin-top: 60px;">Hello Friend!</h1>
+            <img src="character.png" alt="Cute Character" class="icon-large animate-bounce" id="onboarding-char">
+            <p style="font-size: 18px; color: #555; margin-bottom: 30px;">Let's learn and play!</p>
+            <button class="btn-bubbly" onclick="navigateTo('home')">GO! 🚀</button>
+        </section>
+
+        <!-- Home Screen -->
+        <section id="home" class="screen">
+            <div class="env-bg" style="background: var(--bg-blue); opacity: 0.3;"></div>
+            <header style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <button class="btn-bubbly" style="padding: 10px; font-size: 16px;" onclick="navigateTo('onboarding')">🏠</button>
+                <div style="background: var(--sun-yellow); padding: 5px 15px; border-radius: 20px; font-weight: 600;">⭐ <span id="star-count">5</span></div>
+            </header>
+            <div class="category-grid">
+                <div class="category-card" style="border-color: var(--berry-red);" onclick="startActivity('abc')">
+                    <img src="abc_icon.png" alt="ABC" class="icon-large" style="width: 80px; height: 80px;">
+                    <span style="font-weight: 600;">ABC</span>
+                </div>
+                <div class="category-card" style="border-color: var(--playful-orange);" onclick="startActivity('numbers')">
+                    <img src="numbers_icon.png" alt="123" class="icon-large" style="width: 80px; height: 80px;">
+                    <span style="font-weight: 600;">123</span>
+                </div>
+                <div class="category-card" style="border-color: var(--grass-green);">
+                    <div style="font-size: 60px;">🧩</div>
+                    <span style="font-weight: 600;">GAMES</span>
+                </div>
+                <div class="category-card" style="border-color: var(--bg-blue);">
+                    <div style="font-size: 60px;">🎵</div>
+                    <span style="font-weight: 600;">RHYMES</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Screen -->
+        <section id="activity" class="screen">
+            <header style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <button class="btn-bubbly" style="padding: 10px; font-size: 16px;" onclick="navigateTo('home')">⬅️</button>
+                <h2 style="font-size: 24px;" id="activity-title">Find the Apple!</h2>
+            </header>
+            <div id="activity-options" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 10px; width: 100%;">
+                <!-- Dynamically filled -->
+            </div>
+        </section>
+
+        <!-- Reward Screen -->
+        <section id="reward" class="screen">
+            <h1 class="celebrate" style="font-size: 48px; color: var(--sun-yellow); margin-top: 80px;">WOW! 🎉</h1>
+            <div class="celebrate" style="margin: 40px 0;">
+                <img src="gold_star.png" alt="Star" style="width: 150px;" class="animate-bounce">
+            </div>
+            <p style="font-size: 24px; font-weight: 600;">You got a STAR!</p>
+            <button class="btn-bubbly" style="margin-top: 40px;" onclick="navigateTo('home')">PLAY AGAIN</button>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
